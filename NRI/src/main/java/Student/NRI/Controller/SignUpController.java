@@ -29,7 +29,6 @@ public class SignUpController {
             SignUp createdSignup = signUpRepository.save(signUp);
             return ResponseEntity.status(HttpStatus.CREATED).body(createdSignup);
         } catch (DataIntegrityViolationException e) {
-
             return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already exists.");
         }
     }
@@ -72,7 +71,6 @@ public class SignUpController {
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<String> handleDataIntegrityViolationException(DataIntegrityViolationException e) {
-
         return ResponseEntity.status(HttpStatus.CONFLICT).body("Data integrity violation: " + e.getMessage());
     }
 }

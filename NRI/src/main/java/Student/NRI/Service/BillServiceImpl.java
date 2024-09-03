@@ -1,4 +1,3 @@
-// BillServiceImpl.java
 package Student.NRI.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,6 +54,9 @@ public class BillServiceImpl implements BillService {
         billRepository.deleteById(id);
     }
 
-
-
+    // Uncomment and implement if needed
+    // @Override
+    // public void deleteAllBills() {
+    //     billRepository.deleteAll();
+    // }
 }

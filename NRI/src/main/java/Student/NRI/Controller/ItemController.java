@@ -30,7 +30,6 @@ public class ItemController {
 
     @GetMapping("/getAll")
     public List<Item> getAllItems() {
-
         return itemRepository.findAll();
     }
 
@@ -54,7 +53,6 @@ public class ItemController {
         existingItem.setPrice(item.getPrice());
         existingItem.setDescription(item.getDescription());
 
-
         Item updatedItem = itemRepository.save(existingItem);
         return ResponseEntity.ok(updatedItem);
     }
@@ -68,4 +66,3 @@ public class ItemController {
         return ResponseEntity.noContent().build();
     }
 }
-

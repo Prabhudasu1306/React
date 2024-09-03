@@ -12,10 +12,10 @@ import lombok.Setter;
 @Setter
 @Entity
 public class SignUp {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
 
     private String firstName;
 
@@ -25,8 +25,5 @@ public class SignUp {
 
     @Column(unique = true)
     private String email;
-
-
-
 
 }

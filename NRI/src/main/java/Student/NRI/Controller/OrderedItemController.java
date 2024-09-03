@@ -13,7 +13,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/orderItem")
 @CrossOrigin("*")
-public class  OrderedItemController {
+public class OrderedItemController {
 
     @Autowired
     private OrderedItemService orderedItemService;
@@ -52,5 +52,3 @@ public class  OrderedItemController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 }
-
-

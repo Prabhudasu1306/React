@@ -1,4 +1,5 @@
-package Student.NRI.model;// Bill.java
+package Student.NRI.model;
+
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -17,6 +18,7 @@ import java.util.List;
 @Entity
 @Table(name = "bill")
 public class Bill {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "bill_id")
@@ -34,6 +36,4 @@ public class Bill {
 
     @Column(name = "total_bill_amount")
     private double totalBillAmount;
-
-
 }
